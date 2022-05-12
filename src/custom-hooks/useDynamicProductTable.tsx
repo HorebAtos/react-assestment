@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Product } from "../components/DynamicTable";
+import { Product } from "../interfaces/interfaces";
 
-const useDynamicTable = (table: Array<Product>): [Array<string>, Array<Array<string | number>>] => {
+const useDynamicProductTable = (table: Array<Product>): [Array<string>, Array<Array<string | number>>] => {
     const [myTableHead, setTableHeads] = useState<Array<string>>([]);
     const [myTableBody, setTableBody] = useState<Array<Array<string | number>>>([]);
     useEffect(() => {
@@ -23,4 +23,4 @@ const useDynamicTable = (table: Array<Product>): [Array<string>, Array<Array<str
     return [myTableHead, myTableBody];
 }
 
-export default useDynamicTable;
+export default useDynamicProductTable;

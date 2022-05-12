@@ -1,12 +1,15 @@
+import { useEffect } from 'react';
 import './App.css'
-import Dynamictable from './components/DynamicTable';
+import { ProductTableComponent } from './components/ProductTable';
+import { UpgradeTableComponent } from './components/UpgradesTable';
 import { products } from './products.json';
 import { upgrades } from './upgrades.json';
 function App() {
-  console.log(upgrades);
   return (
     <main>
-      <Dynamictable table={products} />
+      <ProductTableComponent table={products} />
+      <br />
+      <UpgradeTableComponent table={upgrades} />
     </main>
   )
 }
