@@ -1,27 +1,12 @@
 import './App.css'
+import Dynamictable from './components/DynamicTable';
 import { products } from './products.json';
 import { upgrades } from './upgrades.json';
 function App() {
-  console.log(products, upgrades);
+  console.log(upgrades);
   return (
     <main>
-      <table>
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-      </table>
+      <Dynamictable table={products} />
     </main>
   )
 }
